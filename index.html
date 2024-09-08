@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya - [Nama Anda]</title>
+    <title>My Profile - [Your Name]</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,6 +21,15 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .language-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switch a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #0066cc;
         }
         .profile-image {
             float: left;
@@ -47,7 +56,7 @@
         a:hover {
             color: #004499;
         }
-        .skills, .projects, .contact {
+        .section {
             margin-top: 40px;
         }
         .contact a {
@@ -66,50 +75,81 @@
 <body>
 
 <div class="container">
-    <div class="profile-info">
-        <!-- Ubah src dengan link gambar Anda -->
-        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-image">
-        <h1>Halo, Saya [Nama Anda]</h1>
-        <p>Saya adalah seorang pengembang web dengan pengalaman dalam HTML, CSS, JavaScript, dan berbagai teknologi lainnya. Saya bersemangat membangun aplikasi web yang efisien dan ramah pengguna. Saat ini, saya sedang memperdalam kemampuan saya dalam framework frontend seperti React dan Vue.js.</p>
+    <!-- Language Switch -->
+    <div class="language-switch">
+        <span>Choose Language:</span>
+        <a href="index.html">Indonesia</a> | 
+        <a href="en.html">English</a>
     </div>
 
-    <!-- Keterampilan -->
-    <section class="skills">
-        <h2>Keterampilan</h2>
+    <div class="profile-info">
+        <!-- Replace src with your image URL -->
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-image">
+        <h1>Hello, I am [Your Name]</h1>
+        <p>I am a web developer with experience in both frontend and backend development. Currently, I work as a [Your Position] at [Your Company/Organization]. I am passionate about technology and continuously improving my skills in frameworks and tools like React and Node.js.</p>
+    </div>
+
+    <!-- Education -->
+    <section class="section">
+        <h2>Education</h2>
         <ul>
-            <li><strong>HTML5 & CSS3:</strong> Membuat layout responsif dan desain modern</li>
-            <li><strong>JavaScript:</strong> Pemrograman interaktif untuk website dinamis</li>
-            <li><strong>React & Vue.js:</strong> Framework modern untuk pengembangan frontend</li>
-            <li><strong>Node.js & Express:</strong> Pengembangan backend menggunakan JavaScript</li>
-            <li><strong>Database (MySQL, MongoDB):</strong> Pengelolaan dan pengintegrasian data</li>
-            <li><strong>Version Control (Git):</strong> Mengelola kode dengan Git dan GitHub</li>
+            <li><strong>[Your University]</strong>, Bachelor of Computer Science (2015 - 2019)
+                <br>Studied software development, databases, and computer networks.</li>
+            <li><strong>[Your High School]</strong>, Science Major (2012 - 2015)</li>
         </ul>
     </section>
 
-    <!-- Proyek -->
-    <section class="projects">
-        <h2>Proyek & Tugas Pemrograman Web</h2>
+    <!-- Work Experience -->
+    <section class="section">
+        <h2>Work Experience</h2>
         <ul>
-            <li><a href="tugas/pert-1.html">Pertemuan 1 - HTML Dasar</a></li>
-            <li><a href="tugas/pert-2.html">Pertemuan 2 - CSS</a></li>
-            <li><a href="tugas/pert-3.html">Pertemuan 3 - JavaScript</a></li>
-            <!-- Tambahkan pertemuan lainnya di sini -->
-        </ul>
-
-        <h3>Proyek Lainnya</h3>
-        <ul>
-            <li><a href="#">Proyek 1: Aplikasi Web E-commerce</a></li>
-            <li><a href="#">Proyek 2: Sistem Manajemen Konten</a></li>
-            <li><a href="#">Proyek 3: Blog Pribadi</a></li>
+            <li><strong>[Your Company]</strong> - [Your Position] (2021 - Present)
+                <br>Lead frontend and backend development teams for web-based projects and manage API integration for scalable applications.
+            </li>
+            <li><strong>[Previous Company]</strong> - [Previous Position] (2019 - 2021)
+                <br>Involved in developing content management systems and building data-driven application features.
+            </li>
         </ul>
     </section>
 
-    <!-- Kontak -->
-    <section class="contact">
-        <h2>Kontak</h2>
-        <p>Jika Anda ingin berdiskusi lebih lanjut atau melihat lebih banyak proyek saya, jangan ragu untuk menghubungi saya melalui:</p>
-        <a href="mailto:[email@example.com]">Kirim Email</a>
-        <p>Atau kunjungi profil saya di platform lain:</p>
+    <!-- Skills -->
+    <section class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>HTML5 & CSS3:</strong> Design and develop responsive layouts</li>
+            <li><strong>JavaScript (ES6+):</strong> Develop interactive and dynamic features</li>
+            <li><strong>React.js & Vue.js:</strong> Modern frameworks for frontend</li>
+            <li><strong>Node.js & Express:</strong> Backend development and API</li>
+            <li><strong>Database (MySQL, MongoDB):</strong> Database design and management</li>
+            <li><strong>Git & GitHub:</strong> Code collaboration and version control</li>
+            <li><strong>Agile & Scrum:</strong> Project management using Agile methodologies</li>
+        </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+        <h2>Projects & Web Programming Tasks</h2>
+        <ul>
+            <li><a href="tugas/pert-1.html">Task 1 - Basic HTML</a></li>
+            <li><a href="tugas/pert-2.html">Task 2 - CSS</a></li>
+            <li><a href="tugas/pert-3.html">Task 3 - JavaScript</a></li>
+            <!-- Add more links to tasks if available -->
+        </ul>
+
+        <h3>Other Projects</h3>
+        <ul>
+            <li><a href="#">E-commerce Application</a>: E-commerce application with payment and product management features.</li>
+            <li><a href="#">Content Management System</a>: A web-based content management system for a non-profit organization.</li>
+            <li><a href="#">Dynamic Blog Application</a>: A blog platform with posting and user management features.</li>
+        </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact">
+        <h2>Contact</h2>
+        <p>If you're interested in my work or would like to discuss further, feel free to contact me via:</p>
+        <a href="mailto:[email@example.com]">Send Email</a>
+        <p>You can also find me at:</p>
         <ul>
             <li><a href="https://github.com/[username]" target="_blank">GitHub</a></li>
             <li><a href="https://linkedin.com/in/[username]" target="_blank">LinkedIn</a></li>
