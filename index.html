@@ -3,17 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya</title>
+    <title>Profil Saya - [Nama Anda]</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
         }
         h1, h2 {
-            color: #333;
+            color: #0066cc;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-image {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .profile-info {
+            overflow: hidden;
         }
         ul {
             list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
         }
         a {
             text-decoration: none;
@@ -22,18 +47,75 @@
         a:hover {
             color: #004499;
         }
+        .skills, .projects, .contact {
+            margin-top: 40px;
+        }
+        .contact a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            background-color: #004499;
+        }
     </style>
 </head>
 <body>
-    <h1>Halo, Saya [Nama Anda]</h1>
-    <p>Saya adalah seorang pengembang web. Berikut ini adalah daftar tugas pemrograman web saya:</p>
 
-    <h2>Daftar Tugas Pemrograman Web</h2>
-    <ul>
-        <li><a href="pemrograman-web/tugas/pertemuan-1.html">Pertemuan 1 - HTML Dasar</a></li>
-        <li><a href="tugas/pert-2.html">Pertemuan 2 - CSS</a></li>
-        <li><a href="tugas/pert-3.html">Pertemuan 3 - JavaScript</a></li>
-        <!-- Tambahkan pertemuan berikutnya sesuai kebutuhan -->
-    </ul>
+<div class="container">
+    <div class="profile-info">
+        <!-- Ubah src dengan link gambar Anda -->
+        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-image">
+        <h1>Halo, Saya [Nama Anda]</h1>
+        <p>Saya adalah seorang pengembang web dengan pengalaman dalam HTML, CSS, JavaScript, dan berbagai teknologi lainnya. Saya bersemangat membangun aplikasi web yang efisien dan ramah pengguna. Saat ini, saya sedang memperdalam kemampuan saya dalam framework frontend seperti React dan Vue.js.</p>
+    </div>
+
+    <!-- Keterampilan -->
+    <section class="skills">
+        <h2>Keterampilan</h2>
+        <ul>
+            <li><strong>HTML5 & CSS3:</strong> Membuat layout responsif dan desain modern</li>
+            <li><strong>JavaScript:</strong> Pemrograman interaktif untuk website dinamis</li>
+            <li><strong>React & Vue.js:</strong> Framework modern untuk pengembangan frontend</li>
+            <li><strong>Node.js & Express:</strong> Pengembangan backend menggunakan JavaScript</li>
+            <li><strong>Database (MySQL, MongoDB):</strong> Pengelolaan dan pengintegrasian data</li>
+            <li><strong>Version Control (Git):</strong> Mengelola kode dengan Git dan GitHub</li>
+        </ul>
+    </section>
+
+    <!-- Proyek -->
+    <section class="projects">
+        <h2>Proyek & Tugas Pemrograman Web</h2>
+        <ul>
+            <li><a href="tugas/pert-1.html">Pertemuan 1 - HTML Dasar</a></li>
+            <li><a href="tugas/pert-2.html">Pertemuan 2 - CSS</a></li>
+            <li><a href="tugas/pert-3.html">Pertemuan 3 - JavaScript</a></li>
+            <!-- Tambahkan pertemuan lainnya di sini -->
+        </ul>
+
+        <h3>Proyek Lainnya</h3>
+        <ul>
+            <li><a href="#">Proyek 1: Aplikasi Web E-commerce</a></li>
+            <li><a href="#">Proyek 2: Sistem Manajemen Konten</a></li>
+            <li><a href="#">Proyek 3: Blog Pribadi</a></li>
+        </ul>
+    </section>
+
+    <!-- Kontak -->
+    <section class="contact">
+        <h2>Kontak</h2>
+        <p>Jika Anda ingin berdiskusi lebih lanjut atau melihat lebih banyak proyek saya, jangan ragu untuk menghubungi saya melalui:</p>
+        <a href="mailto:[email@example.com]">Kirim Email</a>
+        <p>Atau kunjungi profil saya di platform lain:</p>
+        <ul>
+            <li><a href="https://github.com/[username]" target="_blank">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/[username]" target="_blank">LinkedIn</a></li>
+        </ul>
+    </section>
+</div>
+
 </body>
 </html>
