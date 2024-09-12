@@ -3,48 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Programming Course</title>
+    <title>Programming Course Topics</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Programming Course</h1>
-        <p>Explore topics, complete tasks, and review answers.</p>
+
+<div class="container">
+
+    <!-- Profile Header -->
+    <header class="profile-header">
+        <img src="profile.jpg" alt="Instructor Profile" class="profile-picture">
+        <div class="profile-info">
+            <h1>John Doe</h1>
+            <p>Instructor | Programming Courses</p>
+            <p><a href="https://github.com/johndoe" target="_blank">GitHub Profile</a></p>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="section">
-            <h2>Topics</h2>
-            <ul>
-                <li>Introduction to Programming</li>
-                <li>Data Structures</li>
-                <li>Algorithms</li>
-                <li>Web Development</li>
-            </ul>
-        </section>
+    <!-- Course Overview Section -->
+    <section class="course-overview">
+        <h2>Programming Course Overview</h2>
+        <p>This section contains the topics, tasks, and corresponding answers for various programming courses. Each topic includes a task that students must complete, with answers available via GitHub links.</p>
+    </section>
 
-        <section class="section">
-            <h2>Tasks</h2>
-            <ul>
-                <li>Task 1: Build a Calculator</li>
-                <li>Task 2: Create a To-Do List</li>
-                <li>Task 3: Build a Weather App</li>
-            </ul>
-        </section>
+    <!-- Topics Section -->
+    <section class="topics">
+        <h2>Course Topics</h2>
 
-        <section class="section">
-            <h2>Answers</h2>
-            <ul>
-                <li><a href="https://github.com/username/calculator-task" target="_blank">Answer for Task 1</a></li>
-                <li><a href="https://github.com/username/todo-list-task" target="_blank">Answer for Task 2</a></li>
-                <li><a href="https://github.com/username/weather-app-task" target="_blank">Answer for Task 3</a></li>
-            </ul>
-        </section>
-    </main>
+        <!-- Topic 1 -->
+        <div class="topic-card">
+            <h3>Topic 1: Introduction to Programming</h3>
+            <p><strong>Task:</strong> Build a simple "Hello, World" application in Python.</p>
+            <p><strong>Answer:</strong> <a href="https://github.com/johndoe/hello-world" target="_blank">View on GitHub</a></p>
+        </div>
 
-    <footer>
-        &copy; 2024 Programming Course
-    </footer>
+        <!-- Topic 2 -->
+        <div class="topic-card">
+            <h3>Topic 2: Data Structures</h3>
+            <p><strong>Task:</strong> Implement a basic stack and queue using Python lists.</p>
+            <p><strong>Answer:</strong> <a href="https://github.com/johndoe/data-structures" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <!-- Topic 3 -->
+        <div class="topic-card">
+            <h3>Topic 3: Algorithms</h3>
+            <p><strong>Task:</strong> Solve the "binary search" problem in Python.</p>
+            <p><strong>Answer:</strong> <a href="https://github.com/johndoe/binary-search" target="_blank">View on GitHub</a></p>
+        </div>
+
+        <!-- Add more topics as needed -->
+    </section>
+
+</div>
+
 </body>
 </html>
