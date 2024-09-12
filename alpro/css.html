@@ -1,64 +1,77 @@
+/* Reset some basic styling */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Set body styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7f6;
+    line-height: 1.6;
     color: #333;
+    background-color: #f4f7f6;
     padding: 20px;
 }
 
+/* Header styling */
 header {
     text-align: center;
-    padding: 20px;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    margin-bottom: 40px;
 }
 
 header h1 {
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2em;
 }
 
+/* Main container styling */
 .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-h2 {
-    color: #007BFF;
-    margin-bottom: 20px;
+/* Section styling */
+.section {
+    margin-bottom: 30px;
 }
 
+.section h2 {
+    font-size: 1.8em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* List styling */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 li:hover {
     background-color: #eef7ff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 a {
     text-decoration: none;
-    color: #007BFF;
+    color: #007bff;
     font-weight: bold;
 }
 
@@ -66,19 +79,23 @@ a:hover {
     color: #0056b3;
 }
 
+/* Footer styling */
 footer {
     text-align: center;
-    margin-top: 40px;
+    padding: 20px;
     font-size: 0.9em;
     color: #777;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    border-radius: 8px;
 }
 
-@media screen and (max-width: 768px) {
+/* Responsive design for small screens */
+@media screen and (max-width: 600px) {
     header h1 {
         font-size: 2em;
     }
 
     header p {
-        font-size: 1em;
-    }
-}
+        font-size: 
