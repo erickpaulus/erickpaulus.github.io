@@ -1,101 +1,122 @@
-/* Reset some basic styling */
+/* General Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Set body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
     color: #333;
-    background-color: #f4f7f6;
-    padding: 20px;
+    line-height: 1.6;
 }
 
-/* Header styling */
-header {
-    text-align: center;
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-/* Main container styling */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Section styling */
-.section {
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
 
-.section h2 {
-    font-size: 1.8em;
-    color: #007bff;
-    margin-bottom: 15px;
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
-/* List styling */
-ul {
-    list-style-type: none;
-    padding: 0;
+.profile-info h1 {
+    font-size: 2.5em;
+    color: #0366d6;
 }
 
-li {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+.profile-info p {
+    margin-top: 5px;
 }
 
-li:hover {
-    background-color: #eef7ff;
-}
-
-a {
+.profile-info a {
+    color: #0366d6;
     text-decoration: none;
-    color: #007bff;
     font-weight: bold;
 }
 
-a:hover {
-    color: #0056b3;
+.profile-info a:hover {
+    text-decoration: underline;
 }
 
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #777;
+/* Course Overview Section */
+.course-overview {
     background-color: #fff;
-    border-top: 1px solid #ddd;
-    margin-top: 40px;
+    padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
-/* Responsive design for small screens */
-@media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
+.course-overview h2 {
+    font-size: 1.8em;
+    color: #0366d6;
+    margin-bottom: 10px;
+}
+
+/* Topics Section */
+.topics h2 {
+    font-size: 1.8em;
+    color: #0366d6;
+    margin-bottom: 20px;
+}
+
+.topic-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.topic-card h3 {
+    font-size: 1.5em;
+    color: #24292e;
+    margin-bottom: 10px;
+}
+
+.topic-card p {
+    margin-bottom: 10px;
+}
+
+.topic-card a {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topic-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    header p {
-        font-size: 
+    .profile-picture {
+        margin-bottom: 15px;
+    }
+
+    .profile-info h1 {
+        font-size: 2em;
+    }
+}
