@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Link GitHub</title>
+</head>
+
+<body>
+    <h1>Daftar Link GitHub dari CSV</h1>
+    
+    <!-- Daftar link GitHub -->
+    <ul id="githubLinks"></ul>
+
+    <script>
+        // Fungsi untuk membaca CSV dan menampilkan link GitHub
+        function loadCSV() {
+            // Path ke file CSV (pastikan file csv ada di dalam direktori yang sama dengan file HTML)
+            const csvFilePath = './data.csv';  // Assume CSV is named 'data.csv' and is placed in the same folder
+            
+            // Fetch the CSV file
+            fetch(csvFilePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Gagal memuat file CSV');
+                    }
+                    return response.text();
+                })
+                .then(csvText => {
+                    const rows = csvText.split("\n");
+
+                    // Ambil elemen untuk menampilkan link GitHub
+                    const githubLinksElement = document.getElementById('githubLinks');
+                    githubLinksElement.innerHTML = '';
+
+                    // Proses setiap baris CSV
+                    rows.forEach((row, index) => {
+                        if (index === 0) return; // Skip header CSV
+                        
+                        const columns = row.split(',');
+                        let githubLink = columns[4];  // Kolom ke-5 berisi link GitHub
+
+                        // Trim dan bersihkan tautan dari tanda kutip ganda
+                        if (githubLink) {
+                            githubLink = githubLink.trim().replace(/['"]+/g, '');
+
+                            if (githubLink.startsWith("http")) {
+                                const listItem = document.createElement('li');
+                                const link = document.createElement('a');
+                                link.href = githubLink;
+                                link.textContent = githubLink;
+                                link.target = "_blank";
+                                
+                                listItem.appendChild(link);
+                                githubLinksElement.appendChild(listItem);
+                            }
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // Load CSV otomatis saat halaman dimuat
+        window.onload = loadCSV;
+    </script>
+</body>
+</html>
