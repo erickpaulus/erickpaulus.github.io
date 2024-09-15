@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Link GitHub</title>
+</head>
+<body>
+    <h1>Daftar Link GitHub dari CSV</h1>
+    
+    <!-- Input untuk memilih file CSV -->
+    <input type="file" id="fileInput" accept=".csv">
+    
+    <!-- Daftar link GitHub -->
+    <ul id="githubLinks"></ul>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            
+            if (!file) {
+                alert('Pilih file CSV terlebih dahulu.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const content = e.target.result;
+                const rows = content.split("\n");
+
+                // Ambil elemen untuk menampilkan link GitHub
+                const githubLinksElement = document.getElementById('githubLinks');
+                githubLinksElement.innerHTML = '';
+
+                // Proses setiap baris CSV
+                rows.forEach((row, index) => {
+                    if (index === 0) return; // Skip header CSV
+                    
+                    const columns = row.split(',');
+                    const githubLink = columns[4];  // Kolom ke-5 berisi link GitHub
+
+                    if (githubLink) {
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.href = githubLink.trim();
+                        link.textContent = githubLink.trim();
+                        link.target = "_blank";
+                        
+                        listItem.appendChild(link);
+                        githubLinksElement.appendChild(listItem);
+                    }
+                });
+            };
+            
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
