@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Link GitHub</title>
 </head>
+
 <body>
     <h1>Daftar Link GitHub dari CSV</h1>
     
@@ -37,17 +38,22 @@
                     if (index === 0) return; // Skip header CSV
                     
                     const columns = row.split(',');
-                    const githubLink = columns[4];  // Kolom ke-5 berisi link GitHub
+                    let githubLink = columns[4];  // Kolom ke-5 berisi link GitHub
 
+                    // Trim dan bersihkan tautan dari tanda kutip ganda
                     if (githubLink) {
-                        const listItem = document.createElement('li');
-                        const link = document.createElement('a');
-                        link.href = githubLink.trim();
-                        link.textContent = githubLink.trim();
-                        link.target = "_blank";
-                        
-                        listItem.appendChild(link);
-                        githubLinksElement.appendChild(listItem);
+                        githubLink = githubLink.trim().replace(/['"]+/g, '');
+
+                        if (githubLink.startsWith("http")) {
+                            const listItem = document.createElement('li');
+                            const link = document.createElement('a');
+                            link.href = githubLink;
+                            link.textContent = githubLink;
+                            link.target = "_blank";
+                            
+                            listItem.appendChild(link);
+                            githubLinksElement.appendChild(listItem);
+                        }
                     }
                 });
             };
