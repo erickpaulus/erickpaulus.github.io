@@ -27,6 +27,83 @@
             width: 30px;
             height: auto;
         }
+        /* General table styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .table-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow-x: auto; /* Make it scrollable on small screens */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #e9e9e9;
+        }
+
+        /* Responsive design for mobile devices */
+        @media screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            th, td {
+                text-align: right;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-transform: capitalize;
+                color: #555;
+            }
+
+            tr {
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 10px;
+            }
+
+            th {
+                display: none; /* Hide table headers for mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -42,11 +119,73 @@
     <!-- Bagian Topik -->
     <section class="topics">
         <h2>Topik Mata Kuliah</h2>
-
+        <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Column 1">Row 1, Col 1</td>
+                    <td data-label="Column 2">Row 1, Col 2</td>
+                    <td data-label="Column 3">Row 1, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 2, Col 1</td>
+                    <td data-label="Column 2">Row 2, Col 2</td>
+                    <td data-label="Column 3">Row 2, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 3, Col 1</td>
+                    <td data-label="Column 2">Row 3, Col 2</td>
+                    <td data-label="Column 3">Row 3, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 4, Col 1</td>
+                    <td data-label="Column 2">Row 4, Col 2</td>
+                    <td data-label="Column 3">Row 4, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 5, Col 1</td>
+                    <td data-label="Column 2">Row 5, Col 2</td>
+                    <td data-label="Column 3">Row 5, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 6, Col 1</td>
+                    <td data-label="Column 2">Row 6, Col 2</td>
+                    <td data-label="Column 3">Row 6, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 7, Col 1</td>
+                    <td data-label="Column 2">Row 7, Col 2</td>
+                    <td data-label="Column 3">Row 7, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 8, Col 1</td>
+                    <td data-label="Column 2">Row 8, Col 2</td>
+                    <td data-label="Column 3">Row 8, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 9, Col 1</td>
+                    <td data-label="Column 2">Row 9, Col 2</td>
+                    <td data-label="Column 3">Row 9, Col 3</td>
+                </tr>
+                <tr>
+                    <td data-label="Column 1">Row 10, Col 1</td>
+                    <td data-label="Column 2">Row 10, Col 2</td>
+                    <td data-label="Column 3">Row 10, Col 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
         <!-- Topik 1 -->
         <div class="topic-card">
             <h4>Topik 1: HTML</h4>            
-            <p> <a href="https://reguler.live.unpad.ac.id/mod/resource/view.php?id=331374" target="_blank"> Bahan Ajar </a>
+            <p> <a href="https://github.com/erickpaulus/web-programming/#CSS" target="_blank"> Penjelasan Singkat </a>
             &nbsp;
             <p><strong>Tugas:</strong>  Membuat halaman web menggunakan HTML</p>
             <p><a href="https://erickpaulus.github.io/pemrograman-web//tugas/pertemuan-1.html" target="_blank"><strong>Tugas:</strong>  Membuat halaman web </a>
