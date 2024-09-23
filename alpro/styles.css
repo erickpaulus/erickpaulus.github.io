@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info h1 {
+    font-size: 2.5em;
+    color: #0366d6;
+}
+
+.profile-info p {
+    margin-top: 5px;
+}
+
+.profile-info a {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+/* Course Overview Section */
+.course-overview {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.course-overview h2 {
+    font-size: 1.8em;
+    color: #0366d6;
+    margin-bottom: 10px;
+}
+
+/* Topics Section */
+.topics h2 {
+    font-size: 1.8em;
+    color: #0366d6;
+    margin-bottom: 20px;
+}
+
+.topic-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.topic-card h3 {
+    font-size: 1.5em;
+    color: #24292e;
+    margin-bottom: 10px;
+}
+
+.topic-card p {
+    margin-bottom: 10px;
+}
+
+.topic-card a {
+    color: #0366d6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topic-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-picture {
+        margin-bottom: 15px;
+    }
+
+    .profile-info h1 {
+        font-size: 2em;
+    }
+}
