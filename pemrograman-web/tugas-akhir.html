@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projek Akhir Pemrograman Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #0078d7;
+            color: white;
+        }
+        .highlight {
+            background-color: #fffae6;
+        }
+        .best-icon {
+            color: gold;
+            font-size: 1.2em;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daftar Projek Akhir Pemrograman Web</h1>
+    </header>
+    <main>
+        <p>Berikut adalah daftar proyek akhir yang telah diselesaikan oleh siswa:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Projek</th>
+                    <th>Link Repo</th>
+                </tr>
+            </thead>
+            <tbody id="project-list">
+                <!-- Data akan dimuat di sini -->
+            </tbody>
+        </table>
+    </main>
+    <script>
+        // Data CSV dalam bentuk array
+        const csvData = [
+            ["Website Perpustakaan", "https://github.com/bun349/Perpustakaan.git", 0],
+            ["Expense Tracker", "https://github.com/Wilson0024/Expense-Tracker-Web_Kelompok-2.git", 0],
+            ["IKEH (IKEA)", "https://github.com/praktikum-tiunpad-2023/project-pemrograman-web-b-himatif-fmipa-unpad.git", 0],
+            ["Website Manajemen Rumah Sakit UNPAD", "https://github.com/Bilirohman/project-pemweb-b-rumah-sakit-unpad", 0],
+            ["Tebak Gambar Asique😍💥", "https://github.com/AlissaIndraputri230064/Proyek-Tebak-Gambar", 0],
+            ["Website Sewa kosan", "https://github.com/Hafizh220705/Jatinewkost", 0],
+            ["Website brand baju", "https://github.com/HitMagicc/Kaosin.git", 0],
+            ["Gravion", "https://github.com/Fzzrr/GravionAviation.git", 0],
+            ["website review rokok", "https://github.com/mchljordn/cigaRates", 0],
+            ["K-ConcertKit", "https://github.com/praktikum-tiunpad-2023/project-pemrograman-web-b-pribumi.git", 0],
+            ["Website Rental Mobil/Motor", "https://github.com/MarchellinC/Project-Pemrograman-Web-Kelompok-11.git", 0],
+            ["ice cream shop", "https://github.com/praktikum-tiunpad-2023/project-pemrograman-web-b-sar", 0],
+            ["website bimbel seperti ruangguru", "https://github.com/NoelianYT/educachieve", 0],
+            ["Rodaza Coffee", "https://github.com/KangDap/rodaza-coffee", 1]
+        ];
+
+        // Menampilkan data ke dalam tabel
+        const projectList = document.getElementById("project-list");
+        csvData.forEach(row => {
+            const tr = document.createElement("tr");
+            if (row[2] === 1) {
+                tr.classList.add("highlight");
+            }
+            tr.innerHTML = `
+                <td>${row[0]}${row[2] === 1 ? '<span class="best-icon">⭐</span>' : ''}</td>
+                <td><a href="${row[1]}" target="_blank">${row[1]}</a></td>
+            `;
+            projectList.appendChild(tr);
+        });
+    </script>
+</body>
+</html>
