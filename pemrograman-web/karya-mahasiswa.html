@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Karya Mahasiswa</title>
+    <title>Hasil Tugas Pemrograman Web</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        /* Gaya umum */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,105 +18,130 @@
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
         }
-        h1 {
+        h2 {
             color: #4CAF50;
             margin-bottom: 20px;
             font-weight: bold;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        ul li a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        ul li a:hover {
-            text-decoration: underline;
-        }
-        .btn-outline-primary {
-            display: inline-block;
-            margin-top: 20px;
+        p {
+            line-height: 1.6;
+            color: #555;
         }
         .btn-outline-primary:hover {
             background-color: #4CAF50;
             border-color: #4CAF50;
             color: white;
         }
+        .table-container {
+            margin-top: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        tr:nth-child(even) td {
+            background-color: #e9e9e9;
+        }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Daftar Karya Mahasiswa</h1>
-        
-        <!-- Daftar link GitHub -->
-        <ul id="githubLinks"></ul>
-        
-        <div class="text-center mt-4">
-            <a href="index.html" class="btn btn-outline-primary">
-                <i class="fas fa-arrow-left"></i> Kembali ke Halaman Utama
-            </a>
-        </div>
+<div class="container mt-5">
+    <h2>Daftar Hasil Tugas Pemrograman Web</h2>
+    <p>Berikut adalah daftar proyek akhir yang telah diselesaikan oleh siswa:</p>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Link Repo</th>
+                </tr>
+            </thead>
+            <tbody id="project-list">
+                <!-- Data akan dimuat di sini -->
+            </tbody>
+        </table>
     </div>
 
-    <script>
-        // Fungsi untuk membaca CSV dan menampilkan link GitHub
-        function loadCSV() {
-            // Path ke file CSV (pastikan file csv ada di dalam direktori yang sama dengan file HTML)
-            const csvFilePath = 'data.csv';  // Assume CSV is named 'data.csv' and is placed in the same folder
-            
-            // Fetch the CSV file
-            fetch(csvFilePath)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Gagal memuat file CSV');
-                    }
-                    return response.text();
-                })
-                .then(csvText => {
-                    const rows = csvText.split("\n");
+    <!-- Back Button -->
+    <div class="text-center mt-4">
+        <a href="https://erickpaulus.github.io/pemrograman-web/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left"></i> Kembali ke Deskripsi
+        </a>
+    </div>
+</div>
 
-                    // Ambil elemen untuk menampilkan link GitHub
-                    const githubLinksElement = document.getElementById('githubLinks');
-                    githubLinksElement.innerHTML = '';
+<script>
+    // Data array CSV
+    const csvData = [
+        "https://noelianyt.github.io",
+        "https://craten54.github.io/",
+        "https://kurtz17.github.io/",
+        "https://mchljordn.github.io/",
+        "https://rivan-22.github.io/",
+        "https://rantizi.github.io",
+        "https://faizmuzaky1.github.io/",
+        "https://deontmba.github.io/",
+        "https://AlissaIndraputri230064.github.io/",
+        "https://alhongz.github.io/",
+        "https://bun349.github.io/",
+        "https://kangdap.github.io/",
+        "https://azuhadenough.github.io",
+        "https://abdazizhamud.github.io/",
+        "https://malyoo.github.io/PemrogramanWeb/",
+        "https://robaz04.github.io/",
+        "https://odechaerani.github.io/",
+        "https://wilson0024.github.io/",
+        "https://theophilus0054.github.io",
+        "https://fzzrr.github.io/",
+        "https://marchellinc.github.io/",
+        "https://chientafleury.github.io/",
+        "https://bilirohman.github.io/",
+        "https://ooguroryuya.github.io/",
+        "https://maritzaratnaa.github.io/",
+        "https://dinosaurusbaik.github.io/",
+        "https://hanna0036.github.io/",
+        "https://skywalks567.github.io/",
+        "https://audreyshna.github.io/",
+        "https://nadahsym.github.io/",
+        "https://hitmagicc.github.io/PemWeb/",
+        "https://nikitaptrii.github.io/",
+        "https://jannatul22001.github.io",
+        "https://retasakun.github.io/",
+        "https://varrspace.github.io./PemrogramanWeb/",
+        "https://Hafizh220705.github.io",
+        "https://hdans.github.io/",
+        "https://yuraimi.github.io",
+        "https://kaindradjoemena.github.io/",
+        "https://theodora22002.github.io/"
+    ];
 
-                    // Proses setiap baris CSV
-                    rows.forEach((row, index) => {
-                        if (index === 0) return; // Skip header CSV
-                        
-                        const columns = row.split(',');
-                        let githubLink = columns[4];  // Kolom ke-5 berisi link GitHub
+    // Menampilkan data ke dalam tabel
+    const projectList = document.getElementById("project-list");
+    csvData.forEach((link, index) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td><a href="${link}" target="_blank">${link}</a></td>
+        `;
+        projectList.appendChild(tr);
+    });
+</script>
 
-                        // Trim dan bersihkan tautan dari tanda kutip ganda
-                        if (githubLink) {
-                            githubLink = githubLink.trim().replace(/['"]+/g, '');
-
-                            if (githubLink.startsWith("http")) {
-                                const listItem = document.createElement('li');
-                                const link = document.createElement('a');
-                                link.href = githubLink;
-                                link.textContent = githubLink;
-                                link.target = "_blank";
-                                
-                                listItem.appendChild(link);
-                                githubLinksElement.appendChild(listItem);
-                            }
-                        }
-                    });
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        }
-
-        // Load CSV otomatis saat halaman dimuat
-        window.onload = loadCSV;
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
